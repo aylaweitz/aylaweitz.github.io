@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ayla Weitz</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Home</a>
+				<!-- <nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="generic.html" class="active">Generic</a></li>
+						<li><a href="elements.html">Elements</a></li>
+					</ul>
+				</nav> -->
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h2 class="major">Modeling the Orbits of Jupiter's Galilean Satellites</h2>
+							<p>My final project for Astro 120 — Optical and Infrared Astronomy Lab.
+								We observed Jupiter on the Leuschner telescope on November 4, 2021 from 6:46 to 9:56pm PST.</p>
+
+							<center><div class="col-12"><iframe src="images/JupiterFinal.mp4" width=350 height=300></iframe></div></center>
+							<center><i><p>Frames taken throughout our observation. Video made by group member Ben Terao.</p></i></center>
+
+							<p>To obtain Jupiter's coordinates in our CCD we implemented an edge detection filter.
+
+								To find the positions of the moons, we used DAOStarFinder to find their centroid coordinates.
+
+								We subtracted the moons' coordinates by Jupiter's coordinates to obtain the moon's coordinates
+								relative to Jupiter.</p>
+
+								<p>After obtaining the relative moon positions over the course of our observation, we were able to fit
+								the following parametric equations with MCMC: </p>
+
+							<ul>
+								<li>x<sub>n</sub> = a<sub>n</sub> cos(ω<sub>n</sub> (t + d<sub>n</sub>)) • cos (c<sub>n</sub>) − a<sub>n</sub> cos (i<sub>n</sub>) • sin(ω<sub>n</sub> (t + d<sub>n</sub>)) • sin (c<sub>n</sub>)</li>
+								<li>y<sub>n</sub> = a<sub>n</sub> cos (ω<sub>n</sub> (t + d<sub>n</sub>)) • sin (c<sub>n</sub>) + a<sub>n</sub> cos (i<sub>n</sub>) • sin (ω<sub>n</sub> (t + d<sub>n</sub>)) • cos (c<sub>n</sub>)</li>
+							</ul>
+
+							<p> where a<sub>n</sub> is length of semimajor axis (radius of approximately circular orbit) in km,
+									i<sub>n</sub> is angle of inclination of orbit towards the viewer,
+									c<sub>n</sub> is angle of CCW rotation of semimajor axis from CCD horizontal,
+									d<sub>n</sub> is a CCW time displacement from (1,0) of an untransformed orbit,
+									ω<sub>n</sub> is the orbital frequency (radians/min),
+									t is the time in minutes after the first frame.
+
+
+
+							<center><div class="col-4"><img src="images/orbits.jpg" width=auto height=400/></div></center>
+							<center><i><p>Our models for each Galilean satellite with the data we collected overlaid in white.</p></i></center>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Ayla Weitz. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
