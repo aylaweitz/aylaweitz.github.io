@@ -3573,6 +3573,13 @@ input, select, textarea {
 					height: 45vh;
 				}
 
+				.banner.style1 .actions {
+					-moz-justify-content: center;
+					-webkit-justify-content: center;
+					-ms-justify-content: center;
+					justify-content: center;
+				}
+
 		}
 
 		.banner.style1.fullscreen {
